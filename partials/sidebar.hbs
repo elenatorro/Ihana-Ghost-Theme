@@ -1,0 +1,35 @@
+<section id="main-sidebar" class="sidebar">
+
+  <!--  Sidebar Items -->
+  <nav>
+    <ul class="sidebar-list">
+
+     <!--  Navigation Links -->
+     {{navigation}}
+
+     <!--  Custom Links -->
+     <!-- <li class="sidebar-item"><a class="navbar-link" href="#">Home</a></li> -->
+    </ul>
+
+  </nav>
+
+  <!--  Sidebar Footer - Author Info -->
+
+  <footer class="sidebar-footer">
+   {{#if @blog.logo}}
+       <div class="row">
+           <div class="twelve columns">
+
+               <!--  Blog Logo -->
+               <a class="blog-logo--link" href="{{@blog.url}}">
+                   <img class="image image-small" src="{{@blog.logo}}" alt="example circle image" />
+               </a>
+           </div>
+       </div>
+   {{/if}}
+
+    <p>Copyright Ihana Ghost Theme. Made with <span class="u-text-danger">&#x2764;</span> by <a href="http://elenatorro.github.io/">Elena Torró.</a>
+    </p>
+  </footer>
+
+</section>

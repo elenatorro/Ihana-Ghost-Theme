@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{meta_title}}</title>
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/ihana.css"}}" media="screen" title="no title" charset="utf-8" />
+    <link rel="icon" type="image/png" href="{{asset "images/favicon.png"}}" />
+
+    <!-- Ghost Head -->
+    {{ghost_head}}
+</head>
+
+<body>
+
+    <!-- Main Sidebar -->
+    {{> "sidebar"}}
+
+    <!-- Sidebar Toggle -->
+    <a class="sidebar-toggle button-link" id="sidebar-toggle"></a>
+
+    <!-- Content Wrapper -->
+    <section id="main-wrapper" class="container wrapper">
+      <section class="container">
+         {{{body}}}
+      </section>
+    </section>
+
+    <!-- Ghost Foot -->
+    {{ghost_foot}}
+
+    {{> "google_analytics"}}
+
+    {{> "footer" }}
+
+    <script type="text/javascript" src="{{asset "js/ihana.js"}}"></script>
+    </body>
+</html>

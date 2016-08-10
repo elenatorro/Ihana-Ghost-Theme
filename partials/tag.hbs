@@ -1,0 +1,18 @@
+<!-- Everything inside of #tag pulls data from the tag -->
+{{#tag}}
+
+  <section class="author-profile">   
+    <h1>{{name}}</h1>
+    {{#if description}}
+      <h2>{{description}}</h2>
+    {{/if}}
+  </section>
+{{/tag}}
+
+<main role="main">
+    <!-- includes the post loop - partials/loop.hbs -->
+    {{> "loop"}}
+</main>
+
+<!-- Previous/next page links - displayed on every page -->
+{{pagination}}
