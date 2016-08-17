@@ -1,31 +1,35 @@
 <section class="container container-section">
     <section class="row">
+
         {{#prev_post}}
-        <section class="six columns">
+            <section class="six columns">
 
-         <section class="panel panel-prev-post">
-           <header class="panel-header">
-            <a class="panel-post-header-link" href="{{url}}"><i class="icon icon-circle-left"></i> {{title}}</a>
-           </header>
-           <section class="panel-body">
-            <p>{{excerpt words="10"}}&hellip;</p>
-           </section>
-          </section>
+                <section class="panel panel-prev-post">
+                    <header class="panel-header">
+                        <a class="panel-post-header-link" href="{{url}}">{{title}}</a>
+                    </header>
+                    <section class="panel-body">
+                        <p>{{excerpt words="10"}}&hellip;</p>
+                    </section>
+                </section>
 
-        </section>
+            </section>
         {{/prev_post}}
 
         {{#next_post}}
-          <section class="six columns">
-           <section class="panel panel-next-post">
-             <header class="panel-header">
-              <a class="panel-post-header-link" href="{{url}}">{{title}} <i class="icon icon-circle-right"></i></a>
-             </header>
-             <section class="panel-body">
-              <p>{{excerpt words="10"}}&hellip;</p>
-             </section>
+            <section class="six columns">
+
+                <section class="panel panel-next-post">
+                    <header class="panel-header">
+                        <a class="panel-post-header-link" href="{{url}}">{{title}}</a>
+                    </header>
+                    <section class="panel-body">
+                        <p>{{excerpt words="10"}}&hellip;</p>
+                    </section>
+                </section>
+
             </section>
-          </section>
         {{/next_post}}
+
     </section>
 </section>

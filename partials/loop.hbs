@@ -3,15 +3,11 @@
     <article class="row container-section">
 
         <!--  Post Image -->
-        <section class="six columns">
-            <a class="ihana-post-image" style="background-image: url('{{image}}')" href="{{url}}"></a>
-        </section>
-
-        <!--  Post Caption -->
-        <section class="six columns">
+        <section class="twelve columns">
+            <!-- <a class="ihana-post-image" style="background-image: url('{{image}}')" href="{{url}}"></a> -->
 
             <!--  Title -->
-            <a class="ihana-post-title" href="{{url}}">{{{title}}}</a>
+            <h3><a class="ihana-post-title" href="{{url}}">{{{title}}}</a></h3>
 
             <!--  Description -->
             <p>{{excerpt words="26"}}...</p>
@@ -21,9 +17,10 @@
         </section>
     </article>
 
+    <hr>
 {{/foreach}}
 
 <!--  Pagination -->
-<section class="pagination">
+<section class="ihana-pagination">
     {{pagination}}
 </section>

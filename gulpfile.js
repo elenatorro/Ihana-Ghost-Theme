@@ -12,28 +12,28 @@ var
 
 
 const paths = {
-  baseDir: './',
+    baseDir: './',
 
-  sourceHTML: ['*.hbs', './partials/*.hbs'],
-  sourceJS: ['./assets/js/*.js', './bower_components/allineed-sidebar/sidebar.js'],
-  sourceSCSS: ['./assets/ihana.scss'],
-  sourceFONTS: ['./bower_components/allineed/src/fonts/**/*'],
-  sourceIMAGES: ['./bower_components/allineed/src/images/**'],
-  watchSCSS: ['./assets/**/*.scss'],
+    sourceHTML: ['*.hbs', './partials/*.hbs'],
+    sourceJS: ['./assets/js/*.js', './bower_components/allineed-sidebar/sidebar.js'],
+    sourceSCSS: ['./assets/ihana.scss'],
+    sourceFONTS: ['./bower_components/allineed/src/fonts/**/*'],
+    sourceIMAGES: ['./bower_components/allineed/src/images/**'],
+    watchSCSS: ['./assets/**/*.scss'],
 
-  dest: './',
-  destJS: './assets/js/',
-  destCSS: './assets/css/',
-  destFONTS: './assets/fonts/',
-  destIMAGES: './assets/images/',
- },
+    dest: './',
+    destJS: './assets/js/',
+    destCSS: './assets/css/',
+    destFONTS: './assets/fonts/',
+    destIMAGES: './assets/images/',
+  },
 
- PRESETS = ['es2015'],
- BASENAME = 'ihana',
- SOURCES = [paths.sourceHTML],
- OUTPUT_STYLE = 'expanded',
- CLEAN_READ = false,
- BABEL_STEAM = true;
+  PRESETS = ['es2015'],
+  BASENAME = 'ihana',
+  SOURCES = [paths.sourceHTML],
+  OUTPUT_STYLE = 'expanded',
+  CLEAN_READ = false,
+  BABEL_STEAM = true;
 
 gulp.task('watch', function () {
   gulp.watch(paths.sourceJS, ['babel'])

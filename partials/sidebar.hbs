@@ -1,35 +1,41 @@
 <section id="main-sidebar" class="sidebar">
 
-  <!--  Sidebar Items -->
-  <nav>
-    <ul class="sidebar-list">
+    <header class="u-text-centered container-section">
+        {{#if @blog.logo}}
+            <div class="row">
+                <div class="twelve columns">
 
-     <!--  Navigation Links -->
-     {{navigation}}
+                    <!--  Blog Logo -->
+                    <a href="{{@blog.url}}">
+                        <img class="image image-squared image-small ihana-blog-logo" src="{{@blog.logo}}" alt="example circle image" />
+                    </a>
+                </div>
+            </div>
+        {{/if}}
 
-     <!--  Custom Links -->
-     <!-- <li class="sidebar-item"><a class="navbar-link" href="#">Home</a></li> -->
-    </ul>
 
-  </nav>
+        <h4>{{@blog.title}}</h4>
+        <p>{{@blog.description}}</p>
 
-  <!--  Sidebar Footer - Author Info -->
+    </header>
+    <!--  Sidebar Items -->
+    <nav>
+        <ul class="sidebar-list">
 
-  <footer class="sidebar-footer">
-   {{#if @blog.logo}}
-       <div class="row">
-           <div class="twelve columns">
+            <!--  Navigation Links -->
+            {{navigation}}
 
-               <!--  Blog Logo -->
-               <a class="blog-logo--link" href="{{@blog.url}}">
-                   <img class="image image-small" src="{{@blog.logo}}" alt="example circle image" />
-               </a>
-           </div>
-       </div>
-   {{/if}}
+            <!--  Custom Links -->
+            <!-- <li class="sidebar-item"><a class="navbar-link" href="#">Home</a></li> -->
+        </ul>
 
-    <p>Copyright Ihana Ghost Theme. Made with <span class="u-text-danger">&#x2764;</span> by <a href="http://elenatorro.github.io/">Elena Torró.</a>
-    </p>
-  </footer>
+    </nav>
+
+    <!--  Sidebar Footer - Author Info -->
+
+    <footer class="sidebar-footer">
+        <p>Copyright Ihana Ghost Theme. Made with <span class="u-text-danger">&#x2764;</span> by <a href="http://elenatorro.github.io/">Elena Torró.</a>
+        </p>
+    </footer>
 
 </section>

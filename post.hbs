@@ -2,24 +2,21 @@
 
 {{#post}}
 
-<main class="container" role="main">
+<main class="container ihana-post-container" role="main">
     <header class="header">
-        <h3>{{@blog.title}}</h3>
+      <section class="header-post">
+          <section class="row">
+              <section class="twelve columns">
+                  <time datetime="{{date format='YYYY-MM-DD'}}">
+                    <em>{{date format="dddd"}}</em>,
+                    <span>{{date format="DD"}}</span>
+                    <strong>{{date format="MMMM YYYY"}}</strong>
+                  </time>
+                 <h1>{{title}}</h1>
+              </section>
+          </section>
+      </section>
     </header>
-    <section class="header-post">
-        <section class="row">
-            <section class="twelve columns">
-                <time datetime="{{date format='YYYY-MM-DD'}}">
-                  <em>{{date format="dddd"}}</em>,
-                  <span>{{date format="DD"}}</span>
-                  <strong>{{date format="MMMM YYYY"}}</strong>
-                </time>
-            <span class="header-post--title">
-                <h2>{{title}}</h2>
-            </span>
-            </section>
-        </section>
-    </section>
     <section class="row">
         <section class="twelve columns">
             {{content}}

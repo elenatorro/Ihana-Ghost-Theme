@@ -26,18 +26,15 @@
 
     <!-- Content Wrapper -->
     <section id="main-wrapper" class="container wrapper">
-      <section class="container">
-         {{{body}}}
-      </section>
+        <section class="container">
+            {{{body}}}
+        </section>
     </section>
 
     <!-- Ghost Foot -->
-    {{ghost_foot}}
-
-    {{> "google_analytics"}}
-
-    {{> "footer" }}
+    {{ghost_foot}} {{> "google_analytics"}} {{> "footer" }}
 
     <script type="text/javascript" src="{{asset "js/ihana.js"}}"></script>
-    </body>
+</body>
+
 </html>
