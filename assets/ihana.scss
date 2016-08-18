@@ -1,15 +1,15 @@
 // All I Need
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Core
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 @import '../bower_components/allineed/src/allineed/core/fonts';
 @import '../bower_components/allineed/src/allineed/core/variables';
 @import 'ihana-variables';
 @import '../bower_components/allineed/src/allineed/core/base';
 @import 'ihana-base';
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Components
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 @import '../bower_components/allineed/src/allineed/core/components/blockquotes';
 @import '../bower_components/allineed/src/allineed/core/components/buttons';
 @import '../bower_components/allineed/src/allineed/core/components/captions';
@@ -23,103 +23,127 @@
 @import '../bower_components/allineed/src/allineed/core/components/navbar';
 @import '../bower_components/allineed/src/allineed/core/components/panels';
 @import '../bower_components/allineed/src/allineed/core/components/tables';
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Modules
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 @import 'ihana-sidebar.scss';
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Images
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 img {
-    width          : 60%;
-    display        : block;
-    position       : relative;
-    border         : $ihana-border-style;
-    background-size: cover;
-    margin         : 2em auto;
+  width: 60%;
+
+  display: block;
+  position: relative;
+
+  border: $ihana-border-style;
+  background-size: cover;
+
+  margin: 2em auto;
 }
+
 .image {
-    margin: 0;
+  margin: 0;
 }
+
 .ihana-blog-logo {
-    border-radius: 5px 50%;
+  border-radius: 5px 50%;
 }
+
 .ihana-post-image {
-    width          : 100%;
-    height         : $ihana-post-caption-height;
-    display        : block;
-    position       : relative;
-    background-size: cover;
-    border         : $ihana-border-style;
-    transition     : all $sidebar-transition-width-duration;
-    &:hover {
-        transform: scale(1.1, 1.1);
-    }
+  width: 100%;
+  height: $ihana-post-caption-height;
+
+  display: block;
+  position: relative;
+
+  background-size: cover;
+  border: $ihana-border-style;
+
+  transition: all $sidebar-transition-width-duration;
+
+  &:hover {
+      transform: scale(1.1, 1.1);
+  }
 }
+
 .ihana-container,
 .ihana-post-container {
     margin: $base-padding-size * 2 0;
 }
+
 .ihana-post-title {
-    font-size  : 2em;
-    padding    : 0;
-    font-family: $font-family-lato-bold;
+  font-size: 2em;
+  padding: 0;
+  font-family: $font-family-lato-bold;
 }
+
 .ihana-pagination {
-    margin: $base-padding-size * 2 0;
+  margin: $base-padding-size * 2 0;
 }
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+blockquote {
+  @extend .blockquote;
+  @extend .blockquote-primary;
+}
+
 // Panels
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .panel-post-header-link {
-    text-decoration: none;
-    vertical-align : middle;
-    text-transform : uppercase;
-    font-family    : $font-family-open-sans-bold;
-    i {
-        vertical-align: text-bottom;
-    }
+  text-decoration: none;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-family: $font-family-open-sans-bold;
+
+  i {
+      vertical-align: text-bottom;
+  }
 }
+
 .panel-prev-post {
-    .panel-header {
-        text-align: left;
-    }
+  .panel-header {
+    text-align: left;
+  }
 }
+
 .panel-next-post {
-    .panel-header {
-        text-align: right;
-    }
+  .panel-header {
+    text-align: right;
+  }
 }
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Links
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 a,
 a:active,
 a:focus,
 a:visited {
-    color: $colors-primary-background;
-    &:hover {
-        color: $colors-primary-background-hover;
-    }
-}
-.ihana-post-title {
-    text-decoration: none;
-}
-.ihana-social-media {
- font-size: 1.5em;
+  color: $colors-primary-background;
 
- a {
+  &:hover {
+    color: $colors-primary-background-hover;
+  }
+}
+
+.ihana-post-title {
   text-decoration: none;
-  padding: 0.2em;
- }
 }
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.ihana-social-media {
+  font-size: 1.5em;
+
+   a {
+    text-decoration: none;
+    padding: 0.2em;
+   }
+}
+
 // Code
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 code {
-    margin: 2em 0;
+  margin: 2em 0;
 }
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Media Queries
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 @media (min-width: $base-media-phone-min) {}

@@ -1,6 +1,6 @@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Variables
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 $sidebar-expanded-width: 250px;
 $sidebar-collapsed-width: 0;
 $sidebar-toggle-margin: 10px;
@@ -10,100 +10,138 @@ $sidebar-transition-width-duration: 0.2s;
 $sidebar-background-color: #0F0F0F;
 $sidebar-color: $colors-primary;
 $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // Sidebar
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .sidebar {
-    width           : $sidebar-expanded-width;
-    height          : 100%;
-    left            : 0;
-    top             : 0;
-    background-color: $sidebar-background-color;
-    color           : $sidebar-color;
-    border-right    : $ihana-border-style;
-    padding         : 0;
-    position        : fixed;
-    overflow        : hidden;
-    transition      : width $sidebar-transition-width-duration;
-    z-index         : $base-z-index-2;
-    a {
-        color: $colors-primary-background;
-    }
-    .sidebar-container {
-        height: 100%;
-    }
-    &.sidebar-collapsed {
-        width: $sidebar-collapsed-width;
-    }
-    .navbar-link {
-        width: 100%;
-        color: $colors-white;
-        &:hover {
-            background-color: $sidebar-item-active-background-color;
-        }
-    }
-}
-.sidebar-toggle-button {
-    @extend .icon;
-    top       : $sidebar-toggle-margin;
-    position  : fixed;
-    display   : inline-block;
-    font-size : $sidebar-toggle-size;
-    transition: left $sidebar-transition-width-duration;
-    z-index   : $base-z-index-2;
-}
-.sidebar-toggle {
-    @extend .sidebar-toggle-button;
-    @extend .icon-circle-left;
-    left: $sidebar-expanded-width + $sidebar-toggle-margin;
-}
-.sidebar-toggle-collapsed {
-    @extend .sidebar-toggle-button;
-    @extend .icon-circle-right;
-    left: $sidebar-toggle-margin;
-}
-.wrapper {
-    height    : 100%;
-    width     : 90%;
-    left      : $sidebar-expanded-width;
-    right     : 0;
-    top       : $wrapper-media-padding;
-    position  : absolute;
-    transition: left $sidebar-transition-width-duration;
-}
-.wrapper-expanded {
-    left: $sidebar-toggle-margin !important;
-}
-.sidebar-collapsed {
-    width: 0;
-    .sidebar-footer,
-    .sidebar-item {
-        display: none;
-    }
-}
-.sidebar-item {
-    width     : 100%;
-    display   : block;
-    margin    : 0;
-    transition: margin-right $sidebar-transition-width-duration;
-    &.sidebar-item-active {
+  width: $sidebar-expanded-width;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  position: fixed;
+  padding: 0;
+
+  color: $sidebar-color;
+  background-color: $sidebar-background-color;
+  border-right: $ihana-border-style;
+
+  overflow: hidden;
+  transition: width $sidebar-transition-width-duration;
+
+  z-index: $base-z-index-2;
+
+  a {
+    color: $colors-primary-background;
+  }
+
+  .sidebar-container {
+    height: 100%;
+  }
+
+  &.sidebar-collapsed {
+    width: $sidebar-collapsed-width;
+  }
+
+  .navbar-link {
+    width: 100%;
+
+    color: $colors-white;
+
+    &:hover {
         background-color: $sidebar-item-active-background-color;
     }
+  }
 }
+
+.sidebar-toggle-button {
+  @extend .icon;
+
+  position: fixed;
+  top: $sidebar-toggle-margin;
+
+  display: inline-block;
+
+  font-size: $sidebar-toggle-size;
+
+  transition: left $sidebar-transition-width-duration;
+
+  z-index: $base-z-index-2;
+}
+
+.sidebar-toggle {
+  @extend .sidebar-toggle-button;
+  @extend .icon-circle-left;
+
+  left: $sidebar-expanded-width + $sidebar-toggle-margin;
+}
+
+.sidebar-toggle-collapsed {
+  @extend .sidebar-toggle-button;
+  @extend .icon-circle-right;
+
+  left: $sidebar-toggle-margin;
+}
+
+.wrapper {
+  width: inherit;
+  height: 100%;
+
+  top: $wrapper-media-padding;
+  right: 0;
+  left: $sidebar-expanded-width;
+  position: absolute;
+
+  transition: left $sidebar-transition-width-duration;
+}
+
+.wrapper-expanded {
+  left: $sidebar-toggle-margin !important;
+}
+
+.sidebar-collapsed {
+  width: 0;
+
+  .sidebar-footer,
+  .sidebar-item {
+    display: none;
+  }
+}
+
+.sidebar-item {
+  width: 100%;
+
+  display: block;
+  margin: 0;
+
+  transition: margin-right $sidebar-transition-width-duration;
+
+  &.sidebar-item-active {
+    background-color: $sidebar-item-active-background-color;
+  }
+}
+
 .sidebar-footer {
-    width   : 100%;
-    bottom  : 0;
-    left    : 0;
-    position: absolute;
-    padding : $base-padding-size;
-    display : block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  position: absolute;
+  display: block;
+
+  padding: $base-padding-size;
 }
+
+// Media Queries
+
 @media (min-width: $base-media-phone-min) {
-    .wrapper {
-        left         : $sidebar-expanded-width + $wrapper-media-padding;
-        padding-right: $wrapper-media-padding;
-    }
-    .wrapper-expanded {
-        padding-left: 0;
-    }
+  .wrapper {
+    left: $sidebar-expanded-width + $wrapper-media-padding;
+    padding-right: $wrapper-media-padding;
+  }
+
+  .wrapper-expanded {
+    padding-left: 0;
+  }
 }
