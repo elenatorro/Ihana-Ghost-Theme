@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 bower_components
+partials/disqus.hbs
+partials/google_analytics.hbs
