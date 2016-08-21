@@ -24,10 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "allineed": "^0.1.2",
-    "allineed-sidebar": "^0.1.2"
-  },
-  "devDependencies": {
-    "allineed": "^0.1.3"
+    "allineed": "0.2.0",
+    "allineed-sidebar": "0.2.0",
+    "allineed-panel-info": "^0.1.0"
   }
 }

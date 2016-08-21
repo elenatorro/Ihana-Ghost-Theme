@@ -15,7 +15,7 @@ const paths = {
     baseDir: './',
 
     sourceHTML: ['*.hbs', './partials/*.hbs'],
-    sourceJS: ['./assets/js/*.js', './bower_components/allineed-sidebar/sidebar.js'],
+    sourceJS: ['./assets/*.js', './bower_components/allineed-sidebar/sidebar.js'],
     sourceSCSS: ['./assets/ihana.scss'],
     sourceFONTS: ['./bower_components/allineed/src/fonts/**/*'],
     sourceIMAGES: ['./bower_components/allineed/src/images/**'],

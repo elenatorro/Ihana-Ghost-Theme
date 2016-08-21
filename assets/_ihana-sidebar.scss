@@ -13,7 +13,7 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
 
 // Sidebar
 
-.sidebar {
+.ain-sidebar {
   width: $sidebar-expanded-width;
   height: 100%;
 
@@ -36,15 +36,15 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
     color: $colors-primary-background;
   }
 
-  .sidebar-container {
+  .ain-sidebar-container {
     height: 100%;
   }
 
-  &.sidebar-collapsed {
+  &.ain-sidebar-collapsed {
     width: $sidebar-collapsed-width;
   }
 
-  .navbar-link {
+  .ain-navbar-link {
     width: 100%;
 
     color: $colors-white;
@@ -55,10 +55,10 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
   }
 }
 
-.sidebar-toggle-button {
+.ain-sidebar-toggle-button {
   @extend .icon;
 
-  position: fixed;
+  position: absolute;
   top: $sidebar-toggle-margin;
 
   display: inline-block;
@@ -68,23 +68,25 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
   transition: left $sidebar-transition-width-duration;
 
   z-index: $base-z-index-2;
+
+  visibility: hidden;
 }
 
-.sidebar-toggle {
-  @extend .sidebar-toggle-button;
+.ain-sidebar-toggle {
+  @extend .ain-sidebar-toggle-button;
   @extend .icon-circle-left;
 
-  left: $sidebar-expanded-width + $sidebar-toggle-margin;
+  left: $sidebar-expanded-width + $sidebar-toggle-margin * 2;
 }
 
-.sidebar-toggle-collapsed {
-  @extend .sidebar-toggle-button;
+.ain-sidebar-toggle-collapsed {
+  @extend .ain-sidebar-toggle-button;
   @extend .icon-circle-right;
 
-  left: $sidebar-toggle-margin;
+  left: $sidebar-toggle-margin + $sidebar-toggle-margin * 2;
 }
 
-.wrapper {
+.ain-wrapper {
   width: inherit;
   height: 100%;
 
@@ -96,20 +98,20 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
   transition: left $sidebar-transition-width-duration;
 }
 
-.wrapper-expanded {
+.ain-wrapper-expanded {
   left: $sidebar-toggle-margin !important;
 }
 
-.sidebar-collapsed {
+.ain-sidebar-collapsed {
   width: 0;
 
-  .sidebar-footer,
-  .sidebar-item {
+  .ain-sidebar-footer,
+  .ain-sidebar-item {
     display: none;
   }
 }
 
-.sidebar-item {
+.ain-sidebar-item {
   width: 100%;
 
   display: block;
@@ -117,12 +119,12 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
 
   transition: margin-right $sidebar-transition-width-duration;
 
-  &.sidebar-item-active {
+  &.ain-sidebar-item-active {
     background-color: $sidebar-item-active-background-color;
   }
 }
 
-.sidebar-footer {
+.ain-sidebar-footer {
   width: 100%;
   bottom: 0;
   left: 0;
@@ -135,13 +137,18 @@ $sidebar-item-active-background-color: lighten($sidebar-background-color, 10%);
 
 // Media Queries
 
-@media (min-width: $base-media-phone-min) {
-  .wrapper {
+@media (max-width: $base-media-phone-min) {
+  .ain-wrapper {
+    width: 100%;
     left: $sidebar-expanded-width + $wrapper-media-padding;
     padding-right: $wrapper-media-padding;
   }
 
-  .wrapper-expanded {
+  .ain-wrapper-expanded {
     padding-left: 0;
+  }
+
+  .ain-sidebar-toggle-button {
+    visibility: visible;
   }
 }

@@ -2,44 +2,64 @@
 
 {{#post}}
 
-<main class="container ihana-post-container" role="main">
-    <header class="header">
-      <section class="header-post">
-          <section class="row">
-              <section class="twelve columns">
-                  <time datetime="{{date format='YYYY-MM-DD'}}">
-                    <em>{{date format="dddd"}}</em>,
-                    <span>{{date format="DD"}}</span>
-                    <strong>{{date format="MMMM YYYY"}}</strong>
-                  </time>
-                 <h1>{{title}}</h1>
-              </section>
-          </section>
-      </section>
-    </header>
+    <main class="container ihana-post-container" role="main">
+        <header>
+          
+            <section class="ain-panel-info">
 
-    <section class="row">
-        <section class="twelve columns">
-            {{content}}
-        </section>
-    </section>
+                {{#if image}}
+                    <header class="ain-panel-info-header" style="background-image: url('{{image}}');">
+                {{else}}
+                    <header class="ain-panel-info-header ain-panel-primary">
+                {{/if}}
 
-    <section class="row container-section">
-        <section class="twelve columns">
-            {{> "disqus"}}
-        </section>
-    </section>
+                {{#author}}
+                    {{#if image}}
+                        <img src="{{image}}" class="ain-panel-info-header-logo" alt="panel logo" />
+                    {{/if}}
+                {{/author}}
+                </header>
+
+            </section>
+
+            <section>
+                <section class="row">
+                    <section class="twelve columns">
+
+                        <h1>{{title}}</h1>
+
+                        <time datetime="{{date format='YYYY-MM-DD'}}">
+                            <em>{{date format="dddd"}}</em>,
+                            <span>{{date format="DD"}}</span>
+                            <strong>{{date format="MMMM YYYY"}}</strong>
+                        </time>
+                    </section>
+                </section>
+            </section>
+            </header>
+
+            <section class="row">
+                <section class="twelve columns">
+                    {{content}}
+                </section>
+            </section>
+
+            <section class="row container-section">
+                <section class="twelve columns">
+                    {{> "disqus"}}
+                </section>
+            </section>
 
 
 
-    <section class="row container-section">
-       {{> "author"}}
-    </section>
+            <section class="row container-section">
+                {{> "author"}}
+            </section>
 
 
-</main>
+    </main>
 
-<!--  Next & Previous Post -->
-{{> 'post_navigation'}}
+    <!--  Next & Previous Post -->
+    {{> 'post_navigation'}}
 
 {{/post}}

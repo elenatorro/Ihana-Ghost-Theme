@@ -1,18 +1,17 @@
-<section id="main-sidebar" class="sidebar">
+<section id="ain-main-sidebar" class="ain-sidebar">
 
     <header class="u-text-centered container-section">
+
         {{#if @blog.logo}}
             <div class="row">
                 <div class="twelve columns">
 
-                    <!--  Blog Logo -->
                     <a href="{{@blog.url}}">
-                        <img class="image image-squared image-small ihana-blog-logo" src="{{@blog.logo}}" alt="example circle image" />
+                        <img class="ain-image-squared ain-image-small ihana-blog-logo" src="{{@blog.logo}}" alt="example circle image" />
                     </a>
                 </div>
             </div>
         {{/if}}
-
 
         <h4>{{@blog.title}}</h4>
         <p>{{@blog.description}}</p>
@@ -23,7 +22,7 @@
     </header>
 
     <nav>
-        <ul class="sidebar-list">
+        <ul class="ain-sidebar-list">
 
             <!--  Navigation Links -->
             {{navigation}}
@@ -35,7 +34,7 @@
 
     <!--  Sidebar Footer - Author Info -->
 
-    <footer class="sidebar-footer">
+    <footer class="ain-sidebar-footer">
         <p>Copyright Ihana Ghost Theme. Made with <span class="u-text-danger">&#x2764;</span> by <a href="http://elenatorro.github.io/">Elena Torró.</a></p>
     </footer>
 
