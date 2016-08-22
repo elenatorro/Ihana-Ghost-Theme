@@ -1,31 +1,32 @@
 {
-  "name": "ihana",
-  "authors": [
-    "Elena Torro <elenatorro@gmail.com>"
-  ],
-  "description": "Ghost Theme that uses Allineed CSS framework",
-  "main": "index.hbs",
-  "keywords": [
-    "ihana",
-    "theme",
-    "ghost",
-    "allineed",
-    "minimalist",
-    "simple",
-    "lovely"
-  ],
-  "license": "MIT",
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "allineed": "0.2.0",
-    "allineed-sidebar": "0.2.0",
-    "allineed-panel-info": "^0.1.0"
-  }
+    "name": "ihana",
+    "authors": [
+        "Elena Torro <elenatorro@gmail.com>"
+    ],
+    "description": "Ghost Theme that uses Allineed CSS framework",
+    "main": "index.hbs",
+    "keywords": [
+        "ihana",
+        "theme",
+        "ghost",
+        "allineed",
+        "minimalist",
+        "simple",
+        "lovely"
+    ],
+    "license": "MIT",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "demo"
+    ],
+    "dependencies": {
+        "allineed": "0.2.0",
+        "allineed-sidebar": "0.2.0",
+        "allineed-panel-info": "^0.1.0"
+    }
 }
