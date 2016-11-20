@@ -25,7 +25,7 @@
         "demo"
     ],
     "dependencies": {
-        "allineed": "0.2.0",
+        "allineed": "0.2.1",
         "allineed-sidebar": "0.2.0",
         "allineed-panel-info": "^0.1.0"
     }
